@@ -69,15 +69,6 @@ You may not see workflow runs yet, and that is okay.
 
 For this course, it is important that you know where this tab is before we start workflows.
 
-## Why We Use a Template
-
-Creating from a template is easier for beginners than forking because:
-
-- you do not need to think about upstream repositories
-- your repository starts with a clean identity
-- your workflow runs belong to your repository only
-- your commit history stays simple
-
 ## Common Problems
 
 ### I cannot find `Use this template`

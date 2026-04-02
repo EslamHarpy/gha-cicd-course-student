@@ -26,7 +26,6 @@ At the beginning of the course, you do not need:
 - local Git commands
 - Docker on your laptop
 - cloud accounts
-- deep Python knowledge
 
 The early labs are browser-first on purpose.
 
