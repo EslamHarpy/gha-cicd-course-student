@@ -65,6 +65,48 @@ For this course, this is the simplest build shape to learn.
 
 If you want a quick reminder about image tags, use [Artifacts, Images, and Containers](../docs/02-artifacts-images-and-containers.md).
 
+## Optional: Read the Buildx Version
+
+After the core lab feels clear, you can look at this optional example workflow version:
+
+`.github/workflows/03-build-artifact-exercise.yml`
+
+This version keeps the same story but uses reusable Docker actions instead of raw Docker commands where possible:
+
+- `docker/setup-buildx-action` prepares Buildx
+- `docker/build-push-action` builds the image
+- the Buildx step exports a Docker image tar file directly
+- `actions/upload-artifact` still uploads the packaged output
+
+That means the story stays the same:
+
+1. tests pass
+2. the image is built and tagged
+3. the image is exported as a tar file
+4. the tar file is uploaded as a GitHub artifact
+
+Use this optional version when you want to compare:
+
+- a simple raw Docker command path
+- a reusable-action path that many real workflows use
+
+## How the Docker Image Tar File Can Be Used
+
+When the workflow saves the built image as a `.tar` file, it is turning the packaged image into a normal file we can carry forward.
+
+For this course, that tar file can be used in simple ways:
+
+- uploaded as a GitHub Actions artifact
+- downloaded by a later workflow
+- loaded back into Docker with `docker load`
+- used as the exact built package for deployment steps
+
+That is why the tar file matters.
+
+It helps us say:
+
+"Use the image we already built" instead of "build it again and hope it matches."
+
 ## Step 3: Run the Workflow Manually
 
 Open the `Actions` tab.
@@ -150,3 +192,4 @@ After the lab, try to answer these questions:
 - Why are image tags useful?
 - Why is an image different from a container?
 - Why is saving the packaged output better than relying only on source code?
+- How is the Buildx version of this workflow similar to the plain `docker build` version?

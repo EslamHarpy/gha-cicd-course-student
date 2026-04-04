@@ -63,6 +63,18 @@ This action saves a workflow output so it can be used later.
 
 This action retrieves a saved artifact from an earlier workflow run.
 
+### `docker/setup-buildx-action`
+
+This action prepares Docker Buildx on the runner.
+
+It is useful when a workflow wants a more reusable build flow than a raw `docker build` command.
+
+### `docker/build-push-action`
+
+This action can build, tag, load, export, or push Docker images.
+
+In this course, it is a good next-step example because it can replace a raw Docker build command while keeping the same packaging story.
+
 ## How to Find Actions
 
 There are two beginner-friendly places to find them.
@@ -239,6 +251,26 @@ Result you want:
 
 `actions/download-artifact`
 
+### Find Docker Buildx setup
+
+Search:
+
+`github actions docker buildx setup`
+
+Result you want:
+
+`docker/setup-buildx-action`
+
+### Find Docker build and push
+
+Search:
+
+`github actions docker build push action`
+
+Result you want:
+
+`docker/build-push-action`
+
 ## Simple Safety Rules for Beginners
 
 When you look at an action, ask:
@@ -250,6 +282,19 @@ When you look at an action, ask:
 5. is it adding clarity or just more complexity?
 
 For this course, prefer actions that make the workflow clearer, not more advanced.
+
+## One Useful Course Example
+
+In the core build lab, we use a plain `docker build` command because it is easier to teach first.
+
+After that, the optional Buildx example shows how a reusable Docker action can replace that raw command:
+
+- plain command path: read the build logic directly
+- Buildx action path: reuse a ready-made building block
+
+You can see that example here:
+
+- [Buildx Version of the Build Artifact Workflow](../../.github/workflows/03-build-artifact-exercise.yml)
 
 ## Reusable Actions versus Reusable Workflows
 
