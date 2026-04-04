@@ -243,6 +243,30 @@ on:
     - cron: "25 10 * * *"
 ```
 
+### Version 5: Use a Matrix for Two Python Versions
+
+Goal:
+
+See how one CI workflow can repeat the same test job for more than one Python version.
+
+For this version, use this separate exercise workflow:
+
+`.github/workflows/02-ci-matrix-exercise.yml`
+
+This workflow is manual-only on purpose.
+
+It uses a matrix with:
+
+- Python `3.11`
+- Python `3.12`
+
+What to notice:
+
+- GitHub Actions creates more than one run of the same job
+- each matrix run shows a different Python version
+- the test command stays the same
+- this is useful when a team wants broader confidence without writing two separate workflows
+
 ## Exercise Workflow Version
 
 If you want one full example workflow version for the extension exercise, use this:
@@ -298,3 +322,9 @@ You are done when:
 - you can find the runner time in the logs
 - you can explain what `25 10 * * *` means in UTC
 - you can explain why these steps are helpful even though they do not change the app behavior
+
+If you try the matrix version too, you are also done when:
+
+- you can find one run for Python `3.11`
+- you can find one run for Python `3.12`
+- you can explain what the matrix repeated and what stayed the same

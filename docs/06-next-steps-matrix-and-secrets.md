@@ -60,6 +60,17 @@ Matrix workflows are useful, but beginners now have to read:
 
 That is why we did not put matrix builds in the main course labs.
 
+### Optional Repo Example
+
+If you want to see a small matrix exercise in this repository, open:
+
+- [02-ci-matrix-exercise.yml](../.github/workflows/02-ci-matrix-exercise.yml)
+
+This example keeps the trigger manual-only and repeats the CI test job for:
+
+- Python `3.11`
+- Python `3.12`
+
 ## Secrets Management
 
 ### Short Answer
