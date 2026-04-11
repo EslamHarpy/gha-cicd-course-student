@@ -15,3 +15,4 @@ jobs:
     steps:
       - name: Greet the Team
         run: echo "The Pull Request was successfully merged into main!"
+        
