@@ -1,6 +1,6 @@
 # This workflow packages the verified app using Buildx.
 # It is manual on purpose so Day 1 stays focused on CI.
-name: 03 Build Artifact Workflow
+name: 03 Build Artifact Exercise Workflow
 
 on:
   # Students start this workflow manually from the Actions tab.
