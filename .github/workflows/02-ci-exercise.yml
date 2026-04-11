@@ -8,7 +8,7 @@ on:
     paths:
       - "app/**"
       - "tests/**"
-      - ".github/workflows/02-ci.yml"
+      - ".github/workflows/02-ci-exercise.yml"
   # Allow a safe manual run before students trigger it with a code change.
   workflow_dispatch:
 
@@ -55,4 +55,3 @@ jobs:
         # This is the key verification step in the CI workflow.
         run: python -m unittest discover -s tests -v
         #change
-        
