@@ -52,7 +52,6 @@ jobs:
           script: |
             # 1. Login to ECR inside the VM
             # Note: The VM must have Docker and AWS CLI installed
-            aws ecr get-login-password --region ${{ secrets.AWS_REGION }} | sudo docker login --username AWS --password-stdin ${{ secrets.AWS_ACCESS_KEY_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com
             
             # 2. Pull the latest Docker image
             sudo docker pull ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/iti-actions-assessment:latest
