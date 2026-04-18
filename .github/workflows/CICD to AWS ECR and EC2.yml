@@ -1,9 +1,9 @@
 name: CI/CD to AWS ECR and EC2
 
 on:
-  push:
-    branches:
-      - main  # Triggers the workflow on push to the main branch
+  workflow_dispatch:  # Allows manual triggering of the workflow from the GitHub UI
+    #branches:
+      #- main  # Triggers the workflow on push to the main branch
 
 jobs:
   build-and-push:
