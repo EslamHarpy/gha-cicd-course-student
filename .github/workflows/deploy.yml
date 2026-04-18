@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 env:
-  ECR_REPOSITORY: "tiny-health-app"
+  ECR_REPOSITORY: "iti-actions-assessment"
   CONTAINER_NAME: "tiny-health-container"
   APP_PORT: "8000"
   STATIC_TAG: "latest_1"
@@ -15,8 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Wait for Build to finish
-        run: sleep 180
+
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
