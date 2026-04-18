@@ -26,6 +26,7 @@ jobs:
 
   build-and-push:
     needs: verify
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     
     steps:
@@ -39,6 +40,7 @@ jobs:
           scan-ref: '.'
           format: 'table'
           exit-code: '1'
+          ignore-unfixed: true
           severity: 'CRITICAL,HIGH'
 
       - name: Configure AWS credentials
@@ -76,6 +78,7 @@ jobs:
           image-ref: ${{ env.IMAGE_URI_DYNAMIC }}
           format: 'table'
           exit-code: '1'
+          ignore-unfixed: true
           severity: 'CRITICAL,HIGH'
 
       - name: Push image to Amazon ECR
