@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 env:
-  ECR_REPOSITORY: "tiny-health-app" 
+  ECR_REPOSITORY: "iti-actions-assessment" 
 
 jobs:
   verify:
