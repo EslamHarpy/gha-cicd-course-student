@@ -211,19 +211,5 @@ Keep returning to the main story:
 2. verify
 3. package
 4. deliver
-Testing PR flow
-Testing PR flow
-Testing PR flow
-Testing the final CI/CD pipeline
-Adding a second change before the merge
-Testing the final CI/CD pipeline
-Testing the final CI/CD pipeline
-Testing the final CI/CD pipeline
-Testing the final CI/CD pipeline
-Testing the final CI/CD pipeline
-Testing the final CI/CD pipeline
-Testing the final CI/CD pipeline
-Testing the final CI/CD pipeline
-Testing the final CI/CD pipeline
-Testing the final CI/CD pipeline
-Testing the final CI/CD pipeline
+
+Testing the final CI/CD pipeline using ssh and EC2 with ECR
